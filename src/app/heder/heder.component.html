@@ -1,2 +1,12 @@
-<p>heder works!</p>
-Deepak
+<div class="login-container" *ngIf="!isLoggedIn">
+    <h2>Login</h2>
+    <input type="text" [(ngModel)]="username" placeholder="Username" />
+    <input type="password" [(ngModel)]="password" placeholder="Password" />
+    <button (click)="login()">Login</button>
+  </div>
+  
+  <div class="logout-container" *ngIf="isLoggedIn">
+    <h2>Welcome, {{ username }}!</h2>
+    <button (click)="logout()">Logout</button>
+  </div>
+  
