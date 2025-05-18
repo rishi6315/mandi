@@ -1,0 +1,23 @@
+name: Deploy GitHub Pages (Static Angular Build)
+
+on:
+  push:
+    branches:
+      - gh-pages  # Triggers when gh-pages branch is updated
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .   # because gh-pages branch already has built files at root
+          publish_branch: gh-pages
