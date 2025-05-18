@@ -1,9 +1,8 @@
-name: Deploy GitHub Pages (Static Angular Build)
-
 on:
   push:
     branches:
-      - gh-pages  # Triggers when gh-pages branch is updated
+      - gh-pages
+  workflow_dispatch:  # 👈 This adds a manual "Run workflow" button in GitHub UI
 
 jobs:
   deploy:
