@@ -1,12 +1,21 @@
-<div class="login-container" *ngIf="!isLoggedIn">
-    <h2>Login</h2>
-    <input type="text" [(ngModel)]="username" placeholder="Username" />
-    <input type="password" [(ngModel)]="password" placeholder="Password" />
-    <button (click)="login()">Login</button>
-  </div>
-  
-  <div class="logout-container" *ngIf="isLoggedIn">
-    <h2>Welcome, {{ username }}!</h2>
-    <button (click)="logout()">Logout</button>
-  </div>
-  
+<section *ngIf="!isLoggedIn">
+  <form (ngSubmit)="login()" style="max-width: 300px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px;">
+    <h3>Login</h3>
+
+    <label for="username">Username</label><br />
+    <input id="username" [(ngModel)]="username" name="username" type="text" placeholder="Enter username" required style="width: 100%; padding: 8px; margin: 5px 0;" /><br />
+
+    <label for="password">Password</label><br />
+    <input id="password" [(ngModel)]="password" name="password" type="password" placeholder="Enter password" required style="width: 100%; padding: 8px; margin: 5px 0;" /><br />
+
+    <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none;">Login</button>
+  </form>
+</section>
+
+
+<article *ngIf="isLoggedIn" style="text-align: center; padding: 20px;">
+  <h3>Welcome, {{ username }}!</h3>
+  <button (click)="logout()" style="padding: 10px 20px; background-color: #f44336; color: whit; border: none;">Logout</button>
+</article>
+
+<button> <a routerLink="Next">Next</a></button> 

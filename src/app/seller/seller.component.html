@@ -1,0 +1,57 @@
+<section style="background-color: #ffe6e6; padding: 20px; border-radius: 10px; width: 100%;">
+  <h3>🚜 Seller Panel</h3>
+
+  <label>
+    ✅ Verification:
+    <input type="checkbox" [(ngModel)]="isVerified" />
+  </label>
+  <br><br>
+
+    <label>
+      🌍 Which state do you buy from:
+      <select [(ngModel)]="selectedState">
+        <option value="" disabled selected>Select your state</option>
+        <option>Uttar Pradesh</option>
+        <option>Bihar</option>
+        <option>Punjab</option>
+        <option>Haryana</option>
+        <option>Rajasthan</option>
+      </select>
+    </label>
+    <p *ngIf="selectedState">📍 Selected State: <strong>{{ selectedState }}</strong></p>
+
+  <label>
+    🌾 What is your product:
+    <select [(ngModel)]="selectedProduct">
+      <option value="" disabled selected>Select Anaj</option>
+      <option>धान</option>
+      <option>गेहूं</option>
+      <option>मक्का</option>
+      <option>चना</option>
+      <option>सोयाबीन</option>
+    </select>
+  </label>
+  <br><br>
+
+  <label>
+    💰 Price (₹/quintal):
+    <input type="number" [(ngModel)]="productPrice" placeholder="Enter price" />
+  </label>
+  <br><br>
+
+  <label>
+    📞 Mobile Number:
+    <input type="tel" [(ngModel)]="mobileNumber" placeholder="Enter 10-digit number" />
+  </label>
+  <br><br>
+
+  <!-- <label>
+    👨‍🌾 Farmer Verification:
+    <input type="checkbox" [(ngModel)]="farmerVerified" />
+  </label>
+  <br><br> -->
+
+  <!-- <button (click)="cancelProduct()" style="background-color: red; color: white; border: none; padding: 10px; border-radius: 5px;">
+    ❌ Cancel Your Product
+  </button>
+</section> -->

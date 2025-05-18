@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./mideel.component.css']
 })
 export class MideelComponent {
+  
 
 }
