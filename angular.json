@@ -13,9 +13,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/kishan-mandi",
+            "outputPath": "dist/mandi",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref": "/mandi/",
             "polyfills": [
               "zone.js"
             ],

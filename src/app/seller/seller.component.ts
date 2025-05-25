@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './seller.component.html',
   styleUrls: ['./seller.component.css']
 })
+
 export class SellerComponent {
   isVerified = false;
   selectedState = '';
@@ -18,13 +19,10 @@ export class SellerComponent {
     this.selectedProduct = '';
     this.productPrice = null;
     this.mobileNumber = '';  
-    alert('Product entry cancelled!');
   }
   
 
   cancelProduct() {
-                                  
-    
   }
 
 }
